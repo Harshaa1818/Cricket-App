@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { Button, TextField, Grid2, Table, TableHead, TableCell, TableBody, TableRow } from '@mui/material'
 import { players } from './Data/index'
+import './App.css'
 
 function App() {
   const [currValue, setCurrValue] = useState("")
@@ -13,15 +14,19 @@ function App() {
   const handleChange = (e) => {
     setCurrValue(e.target.value)
     //console.log(currValue)
+    setAnotherFlag(false)
+  
 
     const res = handleApi(currValue)
     setSearchData(res)
     setFlag(true)
+     
     
-
-      
   }
+  
+
   const handleSearch = () => {
+    setFlag(false)
    searchData.map((item)=>{
      if(item.name.toLowerCase() === currValue.toLowerCase()){
        setInfo(item)
@@ -30,6 +35,9 @@ function App() {
      }
    })
   }
+  useEffect(()=>{
+    currValue === "" ? setFlag(false) : setFlag(true)
+  },[currValue])
 
   const handleApi = (curr) => {
     return players.filter((item)=>{
@@ -37,6 +45,7 @@ function App() {
 
     })
   }
+
   const handleClick = (name) => {
     setCurrValue(name)
     setFlag(false)
@@ -45,6 +54,9 @@ function App() {
   return (
     
     <>
+    <div className='background'></div>
+    <div className='content'>
+      <div className='content-box'>
     <h1> Your Personalised Cricket App!!!</h1>
      <div style={{marginTop:'50px'}}>
       <TextField label='search your fav player' value={currValue} onChange={handleChange}></TextField>
@@ -52,7 +64,7 @@ function App() {
      
 
       { flag &&
-      (searchData && searchData.map((item, index) =>(
+      (searchData.length==0 ? <h1>No result found</h1> : searchData.map((item, index) =>(
         <div key={index}>
           <h3 onClick={()=>handleClick(item.name)}>{item.name}</h3>
         </div> 
@@ -87,8 +99,8 @@ function App() {
         </div>
       }
      </div>
-
-     
+     </div>
+     </div>
     </>
   )
 }
