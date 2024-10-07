@@ -12,9 +12,11 @@ function App() {
 
   const handleChange = (e) => {
     setCurrValue(e.target.value)
+    //console.log(currValue)
 
     const res = handleApi(currValue)
     setSearchData(res)
+    setFlag(true)
     
 
       
