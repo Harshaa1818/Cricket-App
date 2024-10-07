@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { Button, TextField, Grid2, Table, TableHead, TableCell, TableBody, TableRow } from '@mui/material'
+import { Button, TextField, Grid2, Table, TableHead, TableCell, TableBody, TableRow, Typography } from '@mui/material'
 import { players } from './Data/index'
 import './App.css'
 
@@ -37,6 +37,10 @@ function App() {
   }
   useEffect(()=>{
     currValue === "" ? setFlag(false) : setFlag(true)
+
+    return () => {
+      console.log('cleanup')
+    }
   },[currValue])
 
   const handleApi = (curr) => {
@@ -57,9 +61,11 @@ function App() {
     <div className='background'></div>
     <div className='content'>
       <div className='content-box'>
-    <h1> Your Personalised Cricket App!!!</h1>
+    <Typography variant='h1' color='black'>
+       Cricket Stats
+       </Typography>
      <div style={{marginTop:'50px'}}>
-      <TextField label='search your fav player' value={currValue} onChange={handleChange}></TextField>
+      <TextField label='search your fav player' value={currValue} onChange={handleChange} color='black'></TextField>
       <Grid2 sx={{marginTop:'20px'}}>
      
 
@@ -74,11 +80,11 @@ function App() {
        </Grid2>
       {
         anotherFlag &&
-        <div>
-          <Table>
+        <div className='table-conatiner'>
+          <Table >
             <TableHead>
               <TableRow>
-              <TableCell>Name</TableCell>
+              <TableCell >Name</TableCell>
               <TableCell>Team</TableCell>
               <TableCell>Jersey No.</TableCell>
               <TableCell>Total Runs</TableCell>
@@ -87,7 +93,7 @@ function App() {
             </TableHead>
             <TableBody>
             <TableRow>
-              <TableCell>{info.name}</TableCell>
+              <TableCell >{info.name}</TableCell>
               <TableCell>{info.team}</TableCell>
               <TableCell>{info.Jersey}</TableCell>
               <TableCell>{info.runs}</TableCell>

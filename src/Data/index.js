@@ -7,6 +7,196 @@ export const players = [
         wickets: 4
     },
     {
+        name: 'Sachin Tendulkar',
+        team: 'MI',
+        Jersey: 10,
+        runs: 2334,
+        wickets: 0
+    },
+    {
+        name: 'Suresh Raina',
+        team: 'CSK',
+        Jersey: 3,
+        runs: 5368,
+        wickets: 13
+    },
+    {
+        name: 'Gautam Gambhir',
+        team: 'KKR',
+        Jersey: 23,
+        runs: 4217,
+        wickets: 0
+    },
+    {
+        name: 'Virender Sehwag',
+        team: 'KXIP',
+        Jersey: 44,
+        runs: 2728,
+        wickets: 6
+    },
+    {
+           name: 'Yuvraj Singh',
+            team: 'MI',
+            Jersey: 12,
+            runs: 2750,
+            wickets: 36
+        },
+        {
+            name: 'harbhajan Singh',
+            team: 'KKR',
+            Jersey: 3,
+            runs: 799,
+            wickets: 150
+        },
+        {
+            name: 'Lasith Malinga',
+            team: 'MI',
+            Jersey: 99,
+            runs: 36,
+            wickets: 170
+        },
+        {
+            name: 'Dale Steyn',
+            team: 'RCB',
+            Jersey: 17,
+            runs: 105,
+            wickets: 97
+
+        },
+        {
+            name: 'Chris lynn',
+            team: 'MI',
+            Jersey: 49,
+            runs: 1280,
+            wickets: 0
+        },
+        {
+            name: 'Quinton de Kock',
+            team: 'MI',
+            Jersey: 18,
+            runs: 1954,
+            wickets: 0
+        },
+        {
+            name:'shubhman gill',
+            team: 'KKR',
+            Jersey: 77,
+            runs: 939,
+            wickets: 0
+        },
+        {
+            name: 'steve smith',
+            team: 'DC',
+            Jersey: 49,
+            runs: 2333,
+            wickets: 0
+        },
+        {
+            name: 'Ben stokes',
+            team: 'RR',
+            Jersey: 55,
+            runs: 920,
+            wickets: 28
+
+        },
+        {
+            name: 'Riyan Parag',
+            team: 'RR',
+            Jersey: 1,
+            runs: 252,
+            wickets: 1
+
+        },
+        {
+            name:'Manish Pandey',
+            team: 'SRH',
+            Jersey: 9,
+            runs: 3268,
+            wickets: 0
+        },
+        {
+            name: 'Ajinkya Rahane',
+            team: 'DC',
+            Jersey: 27,
+            runs: 3933,
+            wickets: 0
+        },
+        {
+            name: 'Ravichandran Ashwin',
+            team: 'DC',
+            Jersey: 99,
+            runs: 365,
+            wickets: 138
+        },
+        {
+            name: 'Axar Patel',
+            team: 'DC',
+            Jersey: 26,
+            runs: 711,
+            wickets: 80
+        },
+        {
+            name: 'Harshal Patel',
+            team: 'RCB',
+            Jersey: 13,
+            runs: 222,
+            wickets: 49
+        },
+        {
+            name: 'Deepak Chahar',
+            team: 'CSK',
+            Jersey: 11,
+            runs: 7,
+            wickets: 58
+        },
+        {
+            name: 'Shardul Thakur',
+            team: 'CSK',
+            Jersey: 10,
+            runs: 33,
+            wickets: 48
+        },
+        {
+            name: 'Lungi Ngidi',
+            team: 'CSK',
+            Jersey: 6,
+            runs: 0,
+            wickets: 23
+        },
+        {
+            name: 'T Natarajan',
+            team: 'SRH',
+            Jersey: 22,
+            runs: 0,
+            wickets: 31
+        },
+        {
+            name: 'Bhuvneshwar Kumar',
+            team: 'SRH',
+            Jersey: 15,
+            runs: 71,
+            wickets: 133
+        },
+        {
+            name: 'Rahul Chahar',
+            team: 'MI',
+            Jersey: 25,
+            runs: 17,
+            wickets: 41
+        },
+        {
+            name: 'Anrich Nortje',
+            team: 'DC',
+            Jersey: 22,
+            runs: 0,
+            wickets: 27
+        },
+        {
+            name: 'Kuldeep Yadav',
+            team: 'KKR',
+            Jersey: 1,  
+    },
+    {
         name: 'Rohit Sharma',
         team: 'MI',
         Jersey: 45,
